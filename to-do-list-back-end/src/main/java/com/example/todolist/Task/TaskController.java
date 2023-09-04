@@ -38,9 +38,25 @@ public class TaskController {
         taskService.deleteTask(taskId);
     }
 
-    @PostMapping(value = "/edit")
-    public void editTask(@RequestBody Task newTask){
-        
+    @PutMapping(value = "/{taskId}/edit")
+    public void editTask(@PathVariable("taskId") Long taskId, @RequestBody Task newTask) {
+        Date date = new Date();
+        Timestamp time = new Timestamp(date.getTime());
+
+        // Create a SimpleDateFormat object to format the time
+        SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
+
+        // Format the time portion of the Timestamp
+        String formattedTime = timeFormat.format(time);
+
+        taskService.findById(taskId).map(task -> {
+            task.setTitle(newTask.getTitle());
+            task.setDone(newTask.getDone());
+            task.setTime(formattedTime);
+            taskService.addTask(task);
+            return null;
+        });
     }
+
 
 }
