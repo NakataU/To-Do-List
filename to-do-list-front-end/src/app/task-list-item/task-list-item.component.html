@@ -1,1 +1,7 @@
-<p>task-list-item works!</p>
+<div class="task-item-container" *ngFor="let task of tasks">
+    <span class="checkmark">&#10004;</span>
+    <h1>{{task.title}}</h1>
+    <h2>{{task.time}}</h2>
+    <button class="button-edit">Edit</button>
+    <button class="button-delete" (click)="delete(task.id)" >Delete</button>
+</div>

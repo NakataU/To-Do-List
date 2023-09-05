@@ -1,0 +1,64 @@
+/* Style the container for each task item */
+.task-item-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+  }
+  
+  /* Style the task title */
+  .task-item-container h1 {
+    font-size: 16px;
+    margin: 0;
+    flex-grow: 1;
+  }
+  
+  /* Style the task time */
+  .task-item-container h2 {
+    font-size: 12px;
+    color: #777;
+    margin: 0;
+  }
+  
+  /* Style the check mark icon */
+  .checkmark {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-color: #007bff;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  /* Style the Edit and Delete buttons */
+  .button-delete {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+
+  .button-edit{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .button-edit:hover {
+    background-color: #0056b3;
+  }
+
+  .button-delete:hover {
+    background-color: #8f0b0b;
+  }

@@ -3,6 +3,7 @@ package com.example.todolist.Task;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -22,6 +23,10 @@ public class TaskService {
     public Optional<Task> findById(Long id){
         return taskRepo.findById(id);
     }
+    public List<Task> findAll(){
+        return taskRepo.findAll();
+    }
+
     public void deleteTask(Long taskId){
         boolean exists = taskRepo.existsById(taskId);
         if(!exists){

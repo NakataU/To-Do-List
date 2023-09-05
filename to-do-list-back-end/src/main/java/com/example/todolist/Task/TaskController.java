@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.sql.Timestamp;
+import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
@@ -34,7 +35,7 @@ public class TaskController {
     }
 
     @DeleteMapping(value = "/{taskId}/delete")
-    public void deleteTask(@PathVariable("courseId") Long taskId) {
+    public void deleteTask(@PathVariable("taskId") Long taskId) {
         taskService.deleteTask(taskId);
     }
 
@@ -58,5 +59,8 @@ public class TaskController {
         });
     }
 
-
+    @GetMapping(value = "/all")
+    public List<Task> findAll() {
+        return taskService.findAll();
+    }
 }
