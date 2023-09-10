@@ -1,0 +1,49 @@
+/* Style the container for each task item */
+.task-item-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+/* Style the task information */
+.task-item--task {
+    flex-grow: 1;
+}
+
+.task--title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.task--time {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Style the Edit and Delete buttons */
+.button-edit,
+.button-delete {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-edit:hover,
+.button-delete:hover {
+    background-color: #0056b3;
+}
+
+.button-delete {
+    background-color: #dc3545;
+}
+
+.button-delete:hover {
+    background-color: #c82333;
+}

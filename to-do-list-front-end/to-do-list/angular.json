@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "to-do-list-front-end": {
+    "to-do-list": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/to-do-list-front-end",
+            "outputPath": "dist/to-do-list",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "to-do-list-front-end:build:production"
+              "browserTarget": "to-do-list:build:production"
             },
             "development": {
-              "browserTarget": "to-do-list-front-end:build:development"
+              "browserTarget": "to-do-list:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "to-do-list-front-end:build"
+            "browserTarget": "to-do-list:build"
           }
         },
         "test": {

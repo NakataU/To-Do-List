@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Task } from './Task';
 import { Observable } from 'rxjs';
+import { Task } from './task';
 
 
 @Injectable({
@@ -37,6 +37,18 @@ private taskURL:string;
       }
     );
   }
+
+  // public deleteTask(id:number):void{
+  //   this.http.delete<Task>(this.taskURL + "/" + id + "/delete")
+  //   .subscribe(
+  //     data => {
+  //       console.log("Task deleted successfully", data);
+  //     },
+  //     error => {
+  //       console.error("Error deleting task", error);
+  //     }
+  //   );
+  // }
 
   public deleteTask(id:number):void{
     console.log("in faculty service");
