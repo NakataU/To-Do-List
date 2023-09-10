@@ -8,6 +8,8 @@ import { AddPageComponent } from './add-page/add-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HoldButtonDirective } from './hold-button.directive';
 import { EditPageComponent } from './edit-page/edit-page.component';
+import { MatButtonModule} from '@angular/material/button'
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { EditPageComponent } from './edit-page/edit-page.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

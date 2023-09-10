@@ -1,4 +1,13 @@
- .addTask{
-    bottom: 20px;
-    right: 20px;
+.addTask {
+   position: absolute;
+   bottom: 10px; /* Adjust the distance from the bottom as needed */
+   right: 10px; /* Adjust the distance from the right as needed */
+   background-color:#29e603;
+   font-size: 30px;
+   margin: 10px;
+ }
+
+ .task-page-container--heading{
+   text-align: center;
+
  }

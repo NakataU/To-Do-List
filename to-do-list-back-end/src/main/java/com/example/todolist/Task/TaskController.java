@@ -7,6 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.sql.Timestamp;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
@@ -53,7 +54,7 @@ public class TaskController {
         taskService.findById(taskId).map(task -> {
             task.setTitle(newTask.getTitle());
             task.setDone(newTask.getDone());
-            task.setTime(formattedTime);
+            //task.setTime(formattedTime);
             taskService.addTask(task);
             return null;
         });
@@ -63,4 +64,10 @@ public class TaskController {
     public List<Task> findAll() {
         return taskService.findAll();
     }
+
+    @GetMapping(value = "/{taskId}/byId")
+    public Optional<Task> findById(@PathVariable("taskId") Long taskId){
+        return taskService.findById(taskId);
+    }
 }
+

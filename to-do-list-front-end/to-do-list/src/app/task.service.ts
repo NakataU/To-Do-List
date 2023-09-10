@@ -67,4 +67,10 @@ private taskURL:string;
   public findAll(): Observable<Task[]> {
     return this.http.get<Task[]>(this.taskURL + "/all");
   }
+
+  public findById(id:number):Observable<Task>{
+    return this.http.get<Task>(this.taskURL + "/" + id + "/byId");
+  }
+
+
 }
