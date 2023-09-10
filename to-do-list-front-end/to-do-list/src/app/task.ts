@@ -3,6 +3,6 @@ import { Time } from "@angular/common";
 export interface Task{
     id:number;
     title:string;
-    isDone:boolean;
+    done:boolean;
     time:null
 }

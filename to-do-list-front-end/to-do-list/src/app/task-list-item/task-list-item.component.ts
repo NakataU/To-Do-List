@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class TaskListItemComponent {
 tasks:Task[] = [];
 static ID: number;
+isChecked = false;
 
 constructor(private taskService:TaskService,private router:Router){}
 
@@ -36,7 +37,9 @@ data=>{
     this.router.navigateByUrl('edit-page-component')
   }
 
-  onHold(){
-    console.log("Holded")
+  changeStatus(task:Task){
+    console.log(task)
+    this.taskService.editTask(task.id,task);
   }
+
 }

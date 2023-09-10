@@ -14,7 +14,7 @@ export class AddPageComponent {
   task = {
     id:12,
     title: " ",
-    isDone: false,
+    done: false,
     time: null,
   }
 
@@ -23,7 +23,7 @@ export class AddPageComponent {
   this.task = {
     id:12,
     title:title,
-    isDone:false,
+    done:false,
     time: null 
   }
 

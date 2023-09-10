@@ -10,6 +10,7 @@ import { HoldButtonDirective } from './hold-button.directive';
 import { EditPageComponent } from './edit-page/edit-page.component';
 import { MatButtonModule} from '@angular/material/button'
 import { MatIconModule } from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MatIconModule } from '@angular/material/icon';
     AppRoutingModule,
     HttpClientModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

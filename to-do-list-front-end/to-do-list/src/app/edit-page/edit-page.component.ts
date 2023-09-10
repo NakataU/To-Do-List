@@ -16,7 +16,7 @@ export class EditPageComponent {
   task = {
     id:12,
     title: " ",
-    isDone: false,
+    done: false,
     time: null,
   }
 
@@ -25,7 +25,7 @@ export class EditPageComponent {
     this.task = {
       id:12,
       title:title,
-      isDone:false,
+      done:false,
       time: null 
     }
 
