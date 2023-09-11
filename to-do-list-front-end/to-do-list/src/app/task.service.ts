@@ -38,31 +38,30 @@ private taskURL:string;
     );
   }
 
-  // public deleteTask(id:number):void{
-  //   this.http.delete<Task>(this.taskURL + "/" + id + "/delete")
-  //   .subscribe(
-  //     data => {
-  //       console.log("Task deleted successfully", data);
-  //     },
-  //     error => {
-  //       console.error("Error deleting task", error);
-  //     }
-  //   );
-  // }
-
   public deleteTask(id:number):void{
-    console.log("in faculty service");
-    this.http.delete<Task>(this.taskURL + "/" + id + "/delete").subscribe(
-      (response) => {
-        // Handle the response if needed
-        console.log("Faculty deleted successfully");
+    this.http.delete<Task>(this.taskURL + "/" + id + "/delete")
+    .subscribe(
+      data => {
+        console.log("Task deleted successfully", data);
       },
-      (error) => {
-        // Handle the error if any
-        console.log("Error deleting faculty:", error);
+      error => {
+        console.error("Error deleting task", error);
       }
     );
   }
+
+  // public deleteTask(id:number):void{
+  //   this.http.delete<Task>(this.taskURL + "/" + id + "/delete").subscribe(
+  //     (response) => {
+  //       // Handle the response if needed
+  //       console.log("Task deleted successfully");
+  //     },
+  //     (error) => {
+  //       // Handle the error if any
+  //       console.log("Error deleting task:", error);
+  //     }
+  //   );
+  // }
 
   public findAll(): Observable<Task[]> {
     return this.http.get<Task[]>(this.taskURL + "/all");

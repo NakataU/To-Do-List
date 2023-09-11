@@ -1,9 +1,22 @@
-<div class="task">
-    <h1 class="task-page-container--heading">Тhe smart ones record</h1>
-    <app-task-list-item class="task-page-container--item"></app-task-list-item> 
+   <body>
+        <div class = "page-container">
 
-    <button mat-fab class = "addTask" (click) = "addTask()">
-        <mat-icon>add</mat-icon>
-    </button>
+         <div id="header">
+             <h1 class="task-page-container--heading">Тhe smart ones record</h1>
+         </div>
 
-</div>
+            <div class="task">
+                <app-task-list-item class="task-page-container--item"></app-task-list-item> 
+            </div>
+
+            <div class = "addButton">
+                <button mat-fab class = "addTask" (click) = "addTask()">
+                     <mat-icon>add</mat-icon>
+                 </button>
+            </div>
+            
+            
+        </div>
+    
+   </body>
+   

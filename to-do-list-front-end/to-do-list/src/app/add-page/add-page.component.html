@@ -3,12 +3,14 @@
       <h1>Add Task</h1>
       <form>
         <div class="form-group">
-          <label for="title">Title:</label>
-          <input type="text" id="title"#title title="title" required>
+          <!-- <label for="title">Title:</label> -->
+          <input type="text" id="title" #title title="title" placeholder="Title" required >
         </div>
-        <div>
-          <button class = "button" (click) = "addTask(title.value)">Add</button>
-        </div>
+        <div class = "addButton">
+          <button mat-fab class = "addTask" (click) = "addTask(title.value)">
+               <mat-icon>add</mat-icon>
+           </button>
+      </div>
       </form>
     </div>
   </body>
