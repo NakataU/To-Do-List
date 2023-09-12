@@ -42,17 +42,15 @@
     transition: background-color 0.3s;
 }
 
-.button-edit:hover,
-.button-delete:hover {
+.button-edit:hover{
     background-color: #0056b3;
-}
-
-.button-delete {
-    background-color: #dc3545;
 }
 
 .button-edit {
     background-color: #007bff;
+}
+.button-delete {
+    background-color: #dc3545;
 }
 
 .button-delete:hover {

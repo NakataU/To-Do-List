@@ -34,4 +34,8 @@
         background-color:#29e603;
         margin-top: 10px;
       }
+
+      .addTask:hover{
+        background-color:#2cd909;
+      }
     
