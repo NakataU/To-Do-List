@@ -32,10 +32,19 @@
 
       .addTask{
         background-color:#29e603;
-        margin-top: 10px;
+        margin-top: 20px;
       }
 
       .addTask:hover{
         background-color:#2cd909;
+      }
+
+      input[type="text"]{
+        height: 30px;
+        width: 200px;
+        background-color: #d5d5d5;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow to create a raised effect */
+        border-radius: 5px;
+        border-width: 0;
       }
     
